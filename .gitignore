@@ -1,0 +1,7 @@
+.erlang.mk.*
+deps/*
+_rel/*
+ebin/*
+logs/*
+relx
+test/*.beam

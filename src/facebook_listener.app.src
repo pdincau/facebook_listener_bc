@@ -1,0 +1,26 @@
+%% Feel free to use, reuse and abuse the code in this file.
+
+{application, facebook_listener, [
+	{description, "Facebook listener application."},
+	{vsn, "1"},
+	{modules, []},
+	{registered, [facebook_listener_sup]},
+	{applications, [
+            kernel,
+            stdlib,
+            crypto,
+            asn1,
+            public_key,
+            ssl,
+            cowboy,
+            jsx,
+            inets,
+            lager,
+            eredis
+	]},
+	{mod, {facebook_listener_app, []}},
+	{env, [{http_port, 5498},
+           {repository, repo_mem},
+           {queue, queue_mem},
+           {app_secret, <<"secret">>}]}
+]}.
